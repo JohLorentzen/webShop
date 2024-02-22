@@ -1,21 +1,25 @@
-import React from 'react';
+// App.js
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
+import Courses from './pages/Courses';
+import About from './pages/About';
+import Contact from './pages/Contact';
 import Footer from './components/Footer';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-  
+
 const App = () => {
     return (
         <Router>
             <NavBar />
-            <Switch>
-                <Route path="/"  />
-                <Route path="/courses"  />
-                <Route path="/about"  />
-                <Route path="/contact"  />
-                {/* Add other routes as needed */}
-            </Switch>
+            <Routes>
+                <Route path="/" element={<Courses />} />
+                <Route path="/courses" element={<Courses />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+               
+            </Routes>
             <Footer />
         </Router>
+    
     );
 }
 
