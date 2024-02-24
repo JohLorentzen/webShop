@@ -1,7 +1,7 @@
 // index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/index.css'; // Ensure this path is correct
+import './index.css'; // Ensure this path is correct
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

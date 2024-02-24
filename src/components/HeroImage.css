@@ -1,0 +1,44 @@
+/* HeroImage.css */
+.hero-image {
+    height: 500px; /* Adjust as needed, consider using vh for responsiveness */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    text-align: center;
+    max-width: 80%; /* Limiting the width for better readability */
+    margin: 0 auto;
+}
+
+.hero-text h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em; /* Adjusted for better scaling on various devices */
+    line-height: 1.2; /* Improves readability */
+}
+
+.hero-text p {
+    font-size: 1.2em; /* Slightly reduced for balance */
+    line-height: 1.5; /* Better readability for longer text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-image {
+        height: 300px; /* Smaller height for smaller screens */
+    }
+
+    .hero-text h1 {
+        font-size: 2em; /* Smaller font size for smaller screens */
+    }
+
+    .hero-text p {
+        font-size: 1em; /* Adjusting paragraph size for smaller screens */
+    }
+}
