@@ -15,17 +15,17 @@ function Navbar() {
       <div className="leftSide" id={openLinks ? "open" : "close"}>
         <img src={Logo} alt="AI logo" />
         <div className="hiddenLinks">
-          <Link to="/"> Home </Link>
-          <Link to="/menu"> Courses </Link>
-          <Link to="/about"> About </Link>
-          <Link to="/contact"> Contact </Link>
+          <Link to="/"> Hjem </Link>
+          <Link to="/menu"> Kurs </Link>
+          <Link to="/about"> Om oss </Link>
+          <Link to="/contact"> Kontakt </Link>
         </div>
       </div>
       <div className="rightSide">
-        <Link to="/"> Home </Link>
-        <Link to="/menu"> Courses </Link>
-        <Link to="/about"> About </Link>
-        <Link to="/contact"> Contact </Link>
+        <Link to="/"> Hjem </Link>
+        <Link to="/menu"> Kurs </Link>
+        <Link to="/about"> Om oss </Link>
+        <Link to="/contact"> Kontakt </Link>
         <button onClick={toggleNavbar}>
           <ReorderIcon />
         </button>

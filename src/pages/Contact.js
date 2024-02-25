@@ -10,21 +10,21 @@ function Contact() {
         style={{ backgroundImage: `url(${ImageLeft})` }}
       ></div>
       <div className="rightSide">
-        <h1> Contact Us</h1>
+        <h1> Kontakt oss med din tilbakemelding</h1>
 
         <form id="contact-form" method="POST">
-          <label htmlFor="name">Full Name</label>
-          <input name="name" placeholder="Enter full name..." type="text" />
+          <label htmlFor="name">Fult navn</label>
+          <input name="name" placeholder="Skriv inn fult navn..." type="text" />
           <label htmlFor="email">Email</label>
-          <input name="email" placeholder="Enter email..." type="email" />
-          <label htmlFor="message">Message</label>
+          <input name="email" placeholder="Skriv inn email..." type="email" />
+          <label htmlFor="message">Tilbakemelding</label>
           <textarea
             rows="6"
-            placeholder="Enter message..."
+            placeholder="Skriv inn din tilbakemelding..."
             name="message"
             required
           ></textarea>
-          <button type="submit"> Send Message</button>
+          <button type="submit"> Send tilbakemelding</button>
         </form>
       </div>
     </div>
