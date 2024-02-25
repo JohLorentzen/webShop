@@ -1,19 +1,37 @@
-// NavBar.js
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './NavBar.css';
-const NavBar = () => {
-    return (
-        <nav className="navbar">
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/courses">Courses</Link></li>
-                <li><Link to="/about">About Us</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
-                {/* Other navigation links */}
-            </ul>
-        </nav>
-    );
+import React, { useState } from "react";
+import Logo from "../assets/aiLogo.webp";
+import { Link } from "react-router-dom";
+import ReorderIcon from "@material-ui/icons/Reorder";
+import "../styles/Navbar.css";
+
+function Navbar() {
+  const [openLinks, setOpenLinks] = useState(false);
+
+  const toggleNavbar = () => {
+    setOpenLinks(!openLinks);
+  };
+  return (
+    <div className="navbar">
+      <div className="leftSide" id={openLinks ? "open" : "close"}>
+        <img src={Logo} alt="AI logo" />
+        <div className="hiddenLinks">
+          <Link to="/"> Home </Link>
+          <Link to="/menu"> Menu </Link>
+          <Link to="/about"> About </Link>
+          <Link to="/contact"> Contact </Link>
+        </div>
+      </div>
+      <div className="rightSide">
+        <Link to="/"> Home </Link>
+        <Link to="/menu"> Menu </Link>
+        <Link to="/about"> About </Link>
+        <Link to="/contact"> Contact </Link>
+        <button onClick={toggleNavbar}>
+          <ReorderIcon />
+        </button>
+      </div>
+    </div>
+  );
 }
 
-export default NavBar;
+export default Navbar;
