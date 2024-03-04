@@ -9,11 +9,16 @@ function Footer() {
   return (
     <div className="footer">
       <div className="socialMedia">
-        <InstagramIcon /> <XIcon /> <FacebookIcon /> <LinkedInIcon />
+        <span data-testid="Instagram"><InstagramIcon /></span>
+        <span data-testid="X"><XIcon /></span>
+        <span data-testid="Facebook"><FacebookIcon /></span>
+        <span data-testid="LinkedIn"><LinkedInIcon /></span>
       </div>
       <p> &copy; 2024 datadyktig.no</p>
     </div>
   );
 }
+
+
 
 export default Footer;
