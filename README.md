@@ -1,3 +1,14 @@
+# WELCOME TO THIS WEBSITE FRONTEND REPOSITORY
+
+This is a project dedicated to learning and mastering the frontend side of a production of a functional website.
+In this repo would UI and UX be in focus as well as writing clean test to refactor the code base.
+If you want to run the project feel free to download the repository and start the react app as the guide follows below.
+
+Due notice that some of the images found in this repository are under copyright clames and we do not support the use or
+distrubution of this code base or any other resources other then for educational purposes. 
+
+For inquries contact Johanneslor@hotmail.com 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
