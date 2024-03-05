@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import Footer from "../components/Footer";  // Adjust the import path as needed
+import Footer from "../components/Footer";  
 
 describe("Footer Component", () => {
   test("renders social media icons", () => {

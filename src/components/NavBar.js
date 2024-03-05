@@ -10,25 +10,25 @@ function Navbar() {
   const toggleNavbar = () => {
     setOpenLinks(!openLinks);
   };
+
+  // New function to close the navbar when a link is clicked
+  const closeNavbar = () => {
+    setOpenLinks(false);
+  };
+
   return (
     <div className="navbar">
-      <div className="leftSide" id={openLinks ? "open" : "close"}>
+      <div className="leftSide">
         <img src={Logo} alt="AI logo" />
-        <div className="hiddenLinks">
-          <Link to="/"> Hjem </Link>
-          <Link to="/courese"> Kurs </Link>
-          <Link to="/about"> Om oss </Link>
-          <Link to="/contact"> Kontakt </Link>
-        </div>
-      </div>
-      <div className="rightSide">
-        <Link to="/"> Hjem </Link>
-        <Link to="/courses"> Kurs </Link>
-        <Link to="/about"> Om oss </Link>
-        <Link to="/contact"> Kontakt </Link>
-        <button onClick={toggleNavbar}>
+        <button onClick={toggleNavbar} className="navbarToggle">
           <ReorderIcon />
         </button>
+      </div>
+      <div className={openLinks ? "navLinks open" : "navLinks"}>
+        <Link to="/" onClick={closeNavbar}> Hjem </Link>
+        <Link to="/courses" onClick={closeNavbar}> Kurs </Link>
+        <Link to="/about" onClick={closeNavbar}> Om oss </Link>
+        <Link to="/contact" onClick={closeNavbar}> Kontakt </Link>
       </div>
     </div>
   );
