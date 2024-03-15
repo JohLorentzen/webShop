@@ -10,16 +10,18 @@ function Navbar() {
   const toggleNavbar = () => {
     setOpenLinks(!openLinks);
   };
-
-  // New function to close the navbar when a link is clicked
   const closeNavbar = () => {
     setOpenLinks(false);
   };
-
+/**
+ * The Navbar component is a simple navigation bar with a logo and a toggle button. 
+ */
   return (
     <div className="navbar">
       <div className="leftSide">
         <img src={Logo} alt="AI logo" />
+      </div>
+      <div className="rightSide">
         <button onClick={toggleNavbar} className="navbarToggle">
           <ReorderIcon />
         </button>
@@ -33,5 +35,4 @@ function Navbar() {
     </div>
   );
 }
-
 export default Navbar;

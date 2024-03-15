@@ -4,7 +4,6 @@ import '@testing-library/jest-dom';
 import Navbar from '../components/Navbar';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-// Wrapper component to provide routing context
 const Wrapper = ({ children }) => <Router>{children}</Router>;
 
 describe('Navbar Component', () => {
@@ -17,18 +16,16 @@ describe('Navbar Component', () => {
   test('toggle button shows and hides links', () => {
     render(<Navbar />, { wrapper: Wrapper });
     const toggleButton = screen.getByRole('button');
-    fireEvent.click(toggleButton); // Open the links
+    fireEvent.click(toggleButton);
     expect(screen.getByText('Hjem')).toBeVisible();
-    fireEvent.click(toggleButton); // Close the links
-    // Note: Depending on your CSS, you may need to adjust this to check for absence or different styles
+    fireEvent.click(toggleButton); 
   });
 
   test('clicking a link closes the navbar on smaller screens', () => {
     render(<Navbar />, { wrapper: Wrapper });
     const toggleButton = screen.getByRole('button');
-    fireEvent.click(toggleButton); // Open the links
+    fireEvent.click(toggleButton); 
     const homeLink = screen.getByText('Hjem');
-    fireEvent.click(homeLink); // Click on a link
-    // Check if the navbar is closed. This may depend on how your CSS hides the navbar
+    fireEvent.click(homeLink); 
   });
 });
