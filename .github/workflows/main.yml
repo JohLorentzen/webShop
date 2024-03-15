@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        
+
       - name: Set up SSH
         run: |
           mkdir -p ~/.ssh
@@ -33,18 +33,8 @@ jobs:
       - name: Test
         run: npm test
 
-
       - name: Build
         run: npm run build
-
-      - name: Set up SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
-          ssh-add ~/.ssh/deploy_key
-        env:
-          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
 
       - name: Deploy to server
         run: |
@@ -52,5 +42,3 @@ jobs:
 
       - name: Completed deployment message
         run: echo "Deployed app to server"
-
-      
