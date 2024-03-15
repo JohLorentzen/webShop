@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import Footer from "../components/Footer";  
+import Footer from "../components/Footer.js";  
 
 describe("Footer Component", () => {
   test("renders social media icons", () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/NavBar.js';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 const Wrapper = ({ children }) => <Router>{children}</Router>;
