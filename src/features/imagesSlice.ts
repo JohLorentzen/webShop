@@ -1,12 +1,12 @@
 
-
+/*
 interface ImageStage {
     value : string;
 }
 const initialState = {
     images: [],
   };
-
+*/
 // Action to add images to the state
 const addImages = (images) => ({
     type: 'ADD_IMAGES',
